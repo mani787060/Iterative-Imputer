@@ -1,32 +1,43 @@
 # Iterative Imputer in Machine Learning
 
-## Overview
+## 📌 Project Overview
 
-This project demonstrates how to handle missing values using **Iterative Imputation**, a model-based imputation technique that predicts missing values by learning relationships between features.
+This project demonstrates how to handle missing values using **Iterative Imputation**, an advanced imputation technique that estimates missing values by modeling each feature as a function of the remaining features.
 
-Unlike Mean or Median Imputation, Iterative Imputer uses other available features to estimate missing values, helping preserve the underlying data patterns.
+Unlike Mean, Median, or Mode Imputation, Iterative Imputer uses relationships between variables to generate more realistic and consistent values.
 
 ---
 
-## Key Concepts Covered
+## 🎯 Objectives
+
+* Understand the concept of Iterative Imputation
+* Learn how regression-based imputation works
+* Handle missing values using Scikit-Learn's `IterativeImputer`
+* Compare Iterative Imputation with traditional imputation methods
+* Analyze the impact of imputation on data distribution
+
+---
+
+## 📂 Dataset
+
+**Dataset Used:** `50_Startups.csv`
+
+The dataset contains startup-related features and is used to demonstrate how Iterative Imputer can recover missing numerical values while preserving feature relationships.
+
+---
+
+## 📖 Concepts Covered
 
 * Missing Value Handling
 * Iterative Imputation
-* Regression-Based Imputation
-* Feature Relationship Preservation
-* Comparison with Traditional Imputation Methods
-* Data Distribution Analysis
+* Model-Based Imputation
+* Feature Correlation
+* Data Preprocessing
+* Distribution Analysis
 
 ---
 
-## Dataset
-
-* **50_Startups.csv**
-* Contains startup-related features used to demonstrate missing value treatment using Iterative Imputer.
-
----
-
-## Libraries Used
+## 🛠️ Libraries Used
 
 * Pandas
 * NumPy
@@ -36,54 +47,52 @@ Unlike Mean or Median Imputation, Iterative Imputer uses other available feature
 
 ---
 
-## Implementation Steps
+## ⚙️ Implementation Steps
 
-### 1. Data Loading
+### Data Exploration
 
-* Import the dataset
-* Explore missing values
+* Load and inspect the dataset
+* Identify missing values
+* Analyze feature distributions
 
-### 2. Data Analysis
+### Applying Iterative Imputer
 
-* Identify features containing null values
-* Study feature distributions
+* Import `IterativeImputer`
+* Fit the imputer on the dataset
+* Transform missing values using regression-based predictions
 
-### 3. Iterative Imputation
+### Result Analysis
 
-* Apply `IterativeImputer`
-* Predict missing values using other features
-
-### 4. Evaluation
-
-* Compare distributions before and after imputation
-* Analyze feature relationships
+* Compare data before and after imputation
+* Visualize distribution changes
+* Observe preservation of feature relationships
 
 ---
 
-## Key Observations
+## 🔍 Key Observations
 
-* Iterative Imputer preserves feature correlations better than simple statistical methods.
-* Missing values are estimated using information from other variables.
-* Often provides more realistic imputations than Mean or Median Imputation.
+* Iterative Imputer utilizes information from other features to estimate missing values.
+* It generally preserves feature relationships better than Mean or Median Imputation.
+* The method produces more realistic imputations when variables are correlated.
 
 ---
 
-## Advantages
+## ✅ Advantages
 
-* Preserves data relationships
-* Produces more accurate estimates
-* Useful for numerical datasets
+* Preserves relationships between features
+* Produces more accurate imputations
 * Reduces information loss
+* Suitable for numerical datasets with correlated features
 
 ---
 
-## Conclusion
+## 🏁 Conclusion
 
-Iterative Imputation is an advanced missing value handling technique that uses predictive modeling to estimate missing values. It is particularly useful when features are correlated and can provide better results than traditional imputation methods.
+Iterative Imputation is a powerful missing-value handling technique that uses predictive modeling to estimate missing data. It often performs better than traditional statistical methods and helps maintain the overall structure of the dataset, making it valuable for machine learning preprocessing workflows.
 
 ---
 
-## Technologies Used
+## 💻 Technologies Used
 
 * Python
 * Pandas
